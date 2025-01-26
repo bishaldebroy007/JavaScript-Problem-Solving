@@ -25,10 +25,20 @@ let result = removeDuplicates([1, 2, 2, 3, 4, 4, 5]);
 
 console.log(`One way to remove duplicates: [${result}]`);
 
-//Another way
 
+
+//Another way
 const removeCopies = (array) => {
     let freshArray = [];
 
+    array.forEach(value => {
+        if (!freshArray.includes(value)) {
+            freshArray.push(value);
+        }
+    })
+    return freshArray;
+};
 
-} 
+const result_2 = removeCopies([5, 5, 6, 6, 7]);
+
+console.log(`Another way to remove duplicates: [${result_2}]`);
